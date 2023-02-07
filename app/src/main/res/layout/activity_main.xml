@@ -7,13 +7,15 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:background="#DADADA"
         android:ems="10"
+        android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/checkedTextView"
+        app:layout_constraintBottom_toTopOf="@+id/matching"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,87 +23,82 @@
         app:layout_constraintVertical_bias="0.387" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView5"
+        android:id="@+id/special"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
         android:checkMark="?android:attr/textCheckMark"
         android:checked="false"
-        android:text="CheckedTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        android:text="a special character"
+        app:layout_constraintEnd_toEndOf="@+id/matching"
+        app:layout_constraintTop_toBottomOf="@+id/matching" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView4"
+        android:id="@+id/digit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
         android:checkMark="?android:attr/textCheckMark"
         android:checked="false"
-        android:text="CheckedTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        android:text="a digit"
+        app:layout_constraintEnd_toEndOf="@+id/matching"
+        app:layout_constraintTop_toBottomOf="@+id/matching" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView2"
+        android:id="@+id/uprCLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checkMark="?android:attr/textCheckMark"
         android:checked="false"
-        android:text="CheckedTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        android:text="an uppercase letter"
+        app:layout_constraintEnd_toEndOf="@+id/matching"
+        app:layout_constraintTop_toBottomOf="@+id/matching" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView"
+        android:id="@+id/matching"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checkMark="?android:attr/textCheckMark"
         android:checked="false"
-        android:text="CheckedTextView"
+        android:text="matching"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.449" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView3"
+        android:id="@+id/lwrCLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:checkMark="?android:attr/textCheckMark"
         android:checked="false"
-        android:text="CheckedTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        android:text="a lowercase letter"
+        app:layout_constraintEnd_toEndOf="@+id/matching"
+        app:layout_constraintTop_toBottomOf="@+id/matching" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/confirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:background="#DADADA"
         android:ems="10"
+        android:hint="confirm password"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/checkButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:backgroundTint="#C60000"
+        android:text="check"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkedTextView5" />
+        app:layout_constraintTop_toBottomOf="@+id/special" />
 </androidx.constraintlayout.widget.ConstraintLayout>
