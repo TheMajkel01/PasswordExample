@@ -47,6 +47,13 @@ class MainActivity : AppCompatActivity() {
             else{
                 findViewById<CheckedTextView>(R.id.digit).isChecked = false
             }
+
+            if(password1.any{ !it.isLetterOrDigit() }){
+                findViewById<CheckedTextView>(R.id.special).isChecked = true
+            }
+            else{
+                findViewById<CheckedTextView>(R.id.special).isChecked = false
+            }
         }
     }
 }
